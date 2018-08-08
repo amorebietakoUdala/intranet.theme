@@ -1,0 +1,33 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"
+    lang="en"
+    metal:use-macro="context/main_template/macros/master"
+    i18n:domain="intranet.theme">
+
+
+    <metal:content-core fill-slot="content-core">
+
+        <link rel="stylesheet" type="text/css" href="/++plone++intranet.theme/css/style.css" />
+
+        <form id="form1" name="form1">
+            <div class="bilaketa-eremua">
+                <label for="kalea">Kalea/Calle</label>
+                <input id="kalea" name="kalea" type="text" />
+                <button id="btn-enviar" class="js-bilatu" type="button" name="enviar">Enviar</button>
+            </div>
+        </form>
+
+        <div id="map" data-lat="43.2206664" data-lng="-2.733066600000029" data-kml="/++plone++intranet.theme/js/auzotaxi.kml"/>
+        <script src="/++plone++intranet.theme/bower_components/jquery-3.3.1.min/index.js"/>
+        <script src="/++plone++intranet.theme/js/map.js"/>
+        <script src="/++plone++intranet.theme/js/index-view.js"/>
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCn-GGZ6dxYSUHErqsyVHzKHwReuUz4XPY&libraries=geometry&callback=initMap"/>
+
+        <script>
+            $(document).ready(function(){
+            var view = View();
+            view.onBilatuClick();
+            });
+        </script>
+    </metal:content-core>
+
+</html>

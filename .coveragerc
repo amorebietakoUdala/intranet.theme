@@ -1,0 +1,6 @@
+[report]
+include =
+    src/intranet/*
+omit =
+    */test*
+    */upgrades/*
