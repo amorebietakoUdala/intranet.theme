@@ -26,8 +26,10 @@
             $(document).ready(function(){
             var view = View();
             view.onBilatuClick();
+            view.onSubmit();
             });
         </script>
+
     </metal:content-core>
 
 </html>

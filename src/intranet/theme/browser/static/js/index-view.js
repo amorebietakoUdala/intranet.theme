@@ -18,7 +18,7 @@ function View() {
     $(dom.formularioa).on("submit", function(e) {
       e.preventDefault();
       console.log("Submitted");
-      onBilatuClick();
+      dom.bilatuBotoia.click();
     });
   }
   function onKeyPressed() {
